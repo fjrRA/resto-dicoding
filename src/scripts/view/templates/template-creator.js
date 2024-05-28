@@ -4,7 +4,7 @@ const createRestoDetailTemplate = (restaurant) => `
 <div id="contentdetail" class="resto__detail">
   <div class="resto__info__detail">
     <h2 class="detail_title">${restaurant.name}</h2>
-    <img loading="lazy" class="image_detail" crossorigin="anonymous" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" title="${restaurant.name}" />
+    <img loading="lazy" class="image_detail lazyload" crossorigin="anonymous" data-srcset="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" title="${restaurant.name}" />
     <div class="detail_list">
       <h4>City</h4>
       <p class="detail_city">${restaurant.city}</p>
@@ -50,7 +50,7 @@ const createRestoItemTemplate = (restaurant) => `
     <a href="/#/detail/${restaurant.id}">
       <div class="label__place" tabindex="0"> ${restaurant.city} </div>
       <div class="gambarcontent">
-        <img loading="lazy" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" title="${restaurant.name}" crossorigin="anonymous"/>
+      <img loading="lazy" class="image_detail lazyload" crossorigin="anonymous" data-srcset="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" title="${restaurant.name}" />
       </div>
     
 

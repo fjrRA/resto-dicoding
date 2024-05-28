@@ -119,10 +119,19 @@ $grid-breakpoints: (
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      background-image: (-webkit-image-set("../public/images/heros/hero-image_2-large.jpg" 2x,
+          ));
+      background-image: (image-set("../public/images/heros/hero-image_2-large.jpg" 2x,
+          ));
 
       @media screen and (max-width: map_get($grid-breakpoints, sm)) {
         background-image: url(../public/images/heros/hero-image_2-small.jpg);
         height: 60vh;
+
+        background-image: (-webkit-image-set("../public/images/heros/hero-image_2-small.jpg" 1x,
+            ));
+        background-image: (image-set("../public/images/heros/hero-image_2-small.jpg" 1x,
+            ));
       }
 
       &__title {
