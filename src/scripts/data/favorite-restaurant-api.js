@@ -22,7 +22,7 @@ const FavoriteRestaurantApi = {
   },
 
   async putResto(restaurant) {
-    // eslint-disable-next-line consistent-return
+    // eslint-disable-next-line no-prototype-builtins
     if (!restaurant.hasOwnProperty('id')) {
       return;
     }
