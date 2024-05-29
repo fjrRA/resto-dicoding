@@ -22,7 +22,7 @@ const FavoriteRestaurantApi = {
   },
 
   async putResto(restaurant) {
-    if (!restaurant.hasOwnProperty('id')) {
+    if (!restaurant.prototype.hasOwnProperty.call('id')) {
       return;
     }
 

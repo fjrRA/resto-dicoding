@@ -90,11 +90,17 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: -webkit-image-set("../public/images/heros/hero-image_2-large.jpg" 2x);
+  background-image: -webkit-image-set(url("../public/images/heros/hero-image_2-large.jpg") 2x);
+  background-image: image-set("../public/images/heros/hero-image_2-large.jpg" 2x);
 }
 @media screen and (max-width: 576px) {
   * body .hero {
     background-image: url(../public/images/heros/hero-image_2-small.jpg);
     height: 60vh;
+    background-image: -webkit-image-set("../public/images/heros/hero-image_2-small.jpg" 1x);
+    background-image: -webkit-image-set(url("../public/images/heros/hero-image_2-small.jpg") 1x);
+    background-image: image-set("../public/images/heros/hero-image_2-small.jpg" 1x);
   }
 }
 * body .hero__title {
