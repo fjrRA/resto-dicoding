@@ -10,6 +10,9 @@ const ImageminMozjpeg = require('imagemin-mozjpeg');
 // eslint-disable-next-line prefer-destructuring
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
@@ -41,6 +44,10 @@ module.exports = {
         },
       },
     },
+    minimizer: [new CssMinimizerPlugin({
+      test: /\.css$/,
+    })],
+    minimize: true,
   },
   module: {
     rules: [
@@ -62,7 +69,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
